@@ -17,7 +17,6 @@ int max(int a, int b)
 {
 	return a>=b ? a : b;
 }
-//dodatkowa tablica, ktora zbiera informacje o tym, ktory aktualnie lancuch jest dluzszy (w maxie)
 
 /* recursive LCS */
 int recursiveLCS(int i, int j)
