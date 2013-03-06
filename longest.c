@@ -1,6 +1,7 @@
 /* Longest Common Subsequences */
 /* Zadanie PD1.2, wersja B */
 /* @author Maciej Kołek <kontakt@ferus.info> */
+/* TODO: printing lcs */
 
 /* libs */
 #include <stdio.h>
