@@ -8,35 +8,41 @@
 #include <string.h>
 
 /* variables */
-char stringX[] = "ABA";
-char stringY[] = "ACA";
+char stringX[] = "ABABB";
+char stringY[] = "ACABB";
+int L[100][100];
 
 /* max function */
 int max(int a, int b)
 {
-	return a>b ? a : b;
+	return a>=b ? a : b;
 }
+//dodatkowa tablica, ktora zbiera informacje o tym, ktory aktualnie lancuch jest dluzszy (w maxie)
 
 /* recursive LCS */
 int recursiveLCS(int i, int j)
 {
-	//LCS variable is just for testing purposes.
-	int LCS;
-
-	if (stringX[i] == '\0' || stringY[j] == '\0') LCS = 0;
-	else if (stringX[i] == stringY[j]) LCS = 1 + recursiveLCS(i+1, j+1);
-	else LCS = max(recursiveLCS(i+1, j), recursiveLCS(i, j+1));
-
-	printf("Debug: looking for i = %i and j = %i, LCS = %i\n", i, j, LCS);
-	return LCS;
+	if (L[i][j] < 0) {
+		if (stringX[i] == '\0' || stringY[j] == '\0')L[ i][j] = 0;
+		else if (stringX[i] == stringY[j]) L[i][j] = 1 + recursiveLCS(i+1, j+1);
+		else L[i][j] = max(recursiveLCS(i+1, j), recursiveLCS(i, j+1));
+	}
+	printf("Debug: looking for i = %i and j = %i, LCS = %i\n", i, j, L[i][j]);
+	return L[i][j];
 }
 
 /* main */
 int main()
 {
-	//We start from first letters in both words.
-	int longestLCS = recursiveLCS(0,0);
-	printf("Najwiekszy LCS to: %i", longestLCS);
+	int i,j;
+	int m = (int)strlen(stringX);
 
+	//Fill out our array with -1 statuses.
+	for (i = 0; i <= m; i++)
+	    for (j = 0; j <= m; j++)
+		L[i][j] = -1;
+
+	int longestLCS = recursiveLCS(0,0);
+	printf("\nNajwiekszy LCS to: %i\n", longestLCS);
 	return 0;
 }
