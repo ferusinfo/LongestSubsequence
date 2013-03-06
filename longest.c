@@ -91,7 +91,7 @@ void recursivePrinter(int i, int j)
 /* Print LCS table */
 void debugPrintTable(int m, int n)
 {
-	int i,j,x=1;
+	int i,j;
 	char temp[30];
 	for (i=1; i<=m; i++) {
 		for(j=1; j<=n; j++) {
@@ -99,8 +99,6 @@ void debugPrintTable(int m, int n)
 			{
 				case ACROSS:
 					printf(" \\ [%i][%i]", i,j);
-					//printf("%c",stringX[i]);
-					x++;
 				break;
 
 				case UP:
