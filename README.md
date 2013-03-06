@@ -9,6 +9,10 @@ Also, if you just want to understand the algorithm better, follow this wonderful
 
 http://www.youtube.com/watch?v=wJ-rP9hJXO0
 
+If you still don't get it, there is a Polish Wikipedia article about it:
+
+http://pl.wikipedia.org/wiki/Najd%C5%82u%C5%BCszy_wsp%C3%B3lny_podci%C4%85g
+
 ##Contact
 If you have any questions, don't hesitate to contact me.
 
