@@ -2,6 +2,7 @@
 Many useful information about this topic might be find under this links:
 
 http://www.ics.uci.edu/~eppstein/161/960229.html
+
 http://wordaligned.org/articles/longest-common-subsequence
 
 Also, if you just want to understand the algorithm better, follow this wonderful video:
