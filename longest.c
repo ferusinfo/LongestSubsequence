@@ -20,12 +20,6 @@ int L[100][100];
 int B[100][100];
 char newWord[30];
 
-/* max function */
-int max(int a, int b)
-{
-	return a>=b ? a : b;
-}
-
 /* recursive LCS */
 int recursiveLCS(int i, int j)
 {
