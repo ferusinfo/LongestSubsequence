@@ -35,10 +35,11 @@ int main()
 {
 	int i,j;
 	int m = (int)strlen(stringX);
+	int n = (int)strlen(stringY);
 
 	//Fill out our array with -1 statuses.
 	for (i = 0; i <= m; i++)
-	    for (j = 0; j <= m; j++)
+	    for (j = 0; j <= n; j++)
 		L[i][j] = -1;
 
 	int longestLCS = recursiveLCS(0,0);
